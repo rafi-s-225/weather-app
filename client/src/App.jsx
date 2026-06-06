@@ -6,6 +6,7 @@ import ErrorMessage from "./components/ErrorMessage";
 import "./index.css";
 
 function App() {
+  const BASE_URL = 'https://weather-app-hft3.onrender.com';
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
