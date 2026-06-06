@@ -32,8 +32,14 @@ function App() {
   return (
     <div className="app">
       <h1 className="title">🌤 Weather App</h1>
+      <p className="subtitle">Get real-time weather for any city</p>
       <SearchBar onSearch={fetchWeather} />
-      {loading && <div className="loading">Fetching weather...</div>}
+      {loading && (
+        <div className="loading">
+          <div className="spinner"></div>
+          <span>Fetching weather...</span>
+        </div>
+      )}
       {error && <ErrorMessage message={error} />}
       {weather && <WeatherCard data={weather} />}
     </div>
